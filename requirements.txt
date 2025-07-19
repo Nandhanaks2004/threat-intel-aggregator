@@ -1,0 +1,8 @@
+streamlit
+pandas
+requests
+plotly
+fpdf
+shodan
+virustotal-python
+kaleido
