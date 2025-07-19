@@ -48,6 +48,17 @@ def get_api_keys():
     return load_json(APIKEYS_FILE, {"VT": "", "AbuseIPDB": "", "Shodan": ""})
 
 def get_credentials():
+    try:
+        # Use credentials from Streamlit Secrets if available
+        if "credentials" in st.secrets:
+            # st.secrets['credentials']['users'] is a list of dicts
+            secret_users = st.secrets['credentials']['users']
+            # Make sure we always return {"users": [...]}
+            return {"users": [dict(u) for u in secret_users]}
+    except Exception as e:
+        pass  # Could log error here for local debugging if desired
+
+    # Fallback to local file if running locally
     return load_json(CONFIG_FILE, {"users": [{"username": "admin", "password": "admin"}]})
 
 def get_scanlog():
