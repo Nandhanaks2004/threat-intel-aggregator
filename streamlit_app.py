@@ -44,7 +44,14 @@ def clear_scan_history():
     st.success("Scan history cleared.")
 
 def get_api_keys():
-    # Only use apikeys.json, don't check environment variables
+    import streamlit as st
+    try:
+        if "apikeys" in st.secrets:
+            # st.secrets['apikeys'] should be a dict-like mapping
+            return dict(st.secrets["apikeys"])
+    except Exception:
+        pass
+    # Fallback to file for local development
     return load_json(APIKEYS_FILE, {"VT": "", "AbuseIPDB": "", "Shodan": ""})
 
 def get_credentials():
