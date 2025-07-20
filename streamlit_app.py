@@ -836,7 +836,7 @@ def show_settings():
         """, unsafe_allow_html=True)
         st.caption("Purpose: Help cyber teams unify threat scanning/reporting in one modern browser app.")
     st.markdown("---")
-    st.write("Support: support@example.com")
+    st.write("Support: support@threatintel.com")
 
 # ---- APP ENTRY (SPLASH/LOGIN/HOME)
 def app():
