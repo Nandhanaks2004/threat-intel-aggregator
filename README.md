@@ -17,7 +17,7 @@ https://github.com/Nandhanaks2004/threat-intel-aggregator.git
 
 ## 🎥 Demo Video
 
-*(Insert your demo video link here once uploaded to Google Drive or another platform)*
+https://drive.google.com/file/d/1_ikJnJ7aV3ZadPw2u2pOVyVSZ1jsnjY4/view?usp=drive_link
 
 ## ✨ Features
 
